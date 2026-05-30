@@ -1,0 +1,386 @@
+[
+{
+"name": "Reliance Industries",
+"nse": "RELIANCE.NS",
+"bse": "RELIANCE.BO",
+"sector": "Oil & Gas"
+},
+{
+"name": "Tata Consultancy Services",
+"nse": "TCS.NS",
+"bse": "TCS.BO",
+"sector": "IT Services"
+},
+{
+"name": "HDFC Bank",
+"nse": "HDFCBANK.NS",
+"bse": "HDFCBANK.BO",
+"sector": "Banking"
+},
+{
+"name": "Infosys",
+"nse": "INFY.NS",
+"bse": "INFY.BO",
+"sector": "IT Services"
+},
+{
+"name": "ICICI Bank",
+"nse": "ICICIBANK.NS",
+"bse": "ICICIBANK.BO",
+"sector": "Banking"
+},
+{
+"name": "Hindustan Unilever",
+"nse": "HINDUNILVR.NS",
+"bse": "HINDUNILVR.BO",
+"sector": "FMCG"
+},
+{
+"name": "State Bank of India",
+"nse": "SBIN.NS",
+"bse": "SBIN.BO",
+"sector": "Banking"
+},
+{
+"name": "Bharti Airtel",
+"nse": "BHARTIARTL.NS",
+"bse": "BHARTIARTL.BO",
+"sector": "Telecom"
+},
+{
+"name": "ITC",
+"nse": "ITC.NS",
+"bse": "ITC.BO",
+"sector": "FMCG"
+},
+{
+"name": "Larsen & Toubro",
+"nse": "LT.NS",
+"bse": "LT.BO",
+"sector": "Infrastructure"
+},
+{
+"name": "Kotak Mahindra Bank",
+"nse": "KOTAKBANK.NS",
+"bse": "KOTAKBANK.BO",
+"sector": "Banking"
+},
+{
+"name": "Axis Bank",
+"nse": "AXISBANK.NS",
+"bse": "AXISBANK.BO",
+"sector": "Banking"
+},
+{
+"name": "Asian Paints",
+"nse": "ASIANPAINT.NS",
+"bse": "ASIANPAINT.BO",
+"sector": "Paints"
+},
+{
+"name": "Maruti Suzuki",
+"nse": "MARUTI.NS",
+"bse": "MARUTI.BO",
+"sector": "Automobile"
+},
+{
+"name": "Sun Pharmaceutical",
+"nse": "SUNPHARMA.NS",
+"bse": "SUNPHARMA.BO",
+"sector": "Pharmaceuticals"
+},
+{
+"name": "Titan Company",
+"nse": "TITAN.NS",
+"bse": "TITAN.BO",
+"sector": "Consumer Durables"
+},
+{
+"name": "Wipro",
+"nse": "WIPRO.NS",
+"bse": "WIPRO.BO",
+"sector": "IT Services"
+},
+{
+"name": "HCL Technologies",
+"nse": "HCLTECH.NS",
+"bse": "HCLTECH.BO",
+"sector": "IT Services"
+},
+{
+"name": "UltraTech Cement",
+"nse": "ULTRACEMCO.NS",
+"bse": "ULTRACEMCO.BO",
+"sector": "Cement"
+},
+{
+"name": "Nestle India",
+"nse": "NESTLEIND.NS",
+"bse": "NESTLEIND.BO",
+"sector": "FMCG"
+},
+{
+"name": "Bajaj Finance",
+"nse": "BAJFINANCE.NS",
+"bse": "BAJFINANCE.BO",
+"sector": "NBFC"
+},
+{
+"name": "Power Grid Corporation",
+"nse": "POWERGRID.NS",
+"bse": "POWERGRID.BO",
+"sector": "Power"
+},
+{
+"name": "NTPC",
+"nse": "NTPC.NS",
+"bse": "NTPC.BO",
+"sector": "Power"
+},
+{
+"name": "Tata Motors",
+"nse": "TATAMOTORS.NS",
+"bse": "TATAMOTORS.BO",
+"sector": "Automobile"
+},
+{
+"name": "Tata Steel",
+"nse": "TATASTEEL.NS",
+"bse": "TATASTEEL.BO",
+"sector": "Steel"
+},
+{
+"name": "JSW Steel",
+"nse": "JSWSTEEL.NS",
+"bse": "JSWSTEEL.BO",
+"sector": "Steel"
+},
+{
+"name": "Mahindra & Mahindra",
+"nse": "M&M.NS",
+"bse": "M&M.BO",
+"sector": "Automobile"
+},
+{
+"name": "Adani Enterprises",
+"nse": "ADANIENT.NS",
+"bse": "ADANIENT.BO",
+"sector": "Conglomerate"
+},
+{
+"name": "Adani Ports",
+"nse": "ADANIPORTS.NS",
+"bse": "ADANIPORTS.BO",
+"sector": "Infrastructure"
+},
+{
+"name": "Coal India",
+"nse": "COALINDIA.NS",
+"bse": "COALINDIA.BO",
+"sector": "Mining"
+},
+{
+"name": "Bajaj Finserv",
+"nse": "BAJAJFINSV.NS",
+"bse": "BAJAJFINSV.BO",
+"sector": "NBFC"
+},
+{
+"name": "Oil & Natural Gas Corp",
+"nse": "ONGC.NS",
+"bse": "ONGC.BO",
+"sector": "Oil & Gas"
+},
+{
+"name": "Grasim Industries",
+"nse": "GRASIM.NS",
+"bse": "GRASIM.BO",
+"sector": "Cement"
+},
+{
+"name": "Tech Mahindra",
+"nse": "TECHM.NS",
+"bse": "TECHM.BO",
+"sector": "IT Services"
+},
+{
+"name": "Dr Reddy's Laboratories",
+"nse": "DRREDDY.NS",
+"bse": "DRREDDY.BO",
+"sector": "Pharmaceuticals"
+},
+{
+"name": "Cipla",
+"nse": "CIPLA.NS",
+"bse": "CIPLA.BO",
+"sector": "Pharmaceuticals"
+},
+{
+"name": "Eicher Motors",
+"nse": "EICHERMOT.NS",
+"bse": "EICHERMOT.BO",
+"sector": "Automobile"
+},
+{
+"name": "Hindalco Industries",
+"nse": "HINDALCO.NS",
+"bse": "HINDALCO.BO",
+"sector": "Metals"
+},
+{
+"name": "Britannia Industries",
+"nse": "BRITANNIA.NS",
+"bse": "BRITANNIA.BO",
+"sector": "FMCG"
+},
+{
+"name": "Hero MotoCorp",
+"nse": "HEROMOTOCO.NS",
+"bse": "HEROMOTOCO.BO",
+"sector": "Automobile"
+},
+{
+"name": "Bajaj Auto",
+"nse": "BAJAJ-AUTO.NS",
+"bse": "BAJAJ-AUTO.BO",
+"sector": "Automobile"
+},
+{
+"name": "IndusInd Bank",
+"nse": "INDUSINDBK.NS",
+"bse": "INDUSINDBK.BO",
+"sector": "Banking"
+},
+{
+"name": "Divi's Laboratories",
+"nse": "DIVISLAB.NS",
+"bse": "DIVISLAB.BO",
+"sector": "Pharmaceuticals"
+},
+{
+"name": "Apollo Hospitals",
+"nse": "APOLLOHOSP.NS",
+"bse": "APOLLOHOSP.BO",
+"sector": "Healthcare"
+},
+{
+"name": "Tata Consumer Products",
+"nse": "TATACONSUM.NS",
+"bse": "TATACONSUM.BO",
+"sector": "FMCG"
+},
+{
+"name": "SBI Life Insurance",
+"nse": "SBILIFE.NS",
+"bse": "SBILIFE.BO",
+"sector": "Insurance"
+},
+{
+"name": "HDFC Life Insurance",
+"nse": "HDFCLIFE.NS",
+"bse": "HDFCLIFE.BO",
+"sector": "Insurance"
+},
+{
+"name": "Shriram Finance",
+"nse": "SHRIRAMFIN.NS",
+"bse": "SHRIRAMFIN.BO",
+"sector": "NBFC"
+},
+{
+"name": "LTIMindtree",
+"nse": "LTIM.NS",
+"bse": "LTIM.BO",
+"sector": "IT Services"
+},
+{
+"name": "Pidilite Industries",
+"nse": "PIDILITIND.NS",
+"bse": "PIDILITIND.BO",
+"sector": "Chemicals"
+},
+{
+"name": "DLF",
+"nse": "DLF.NS",
+"bse": "DLF.BO",
+"sector": "Real Estate"
+},
+{
+"name": "Zomato",
+"nse": "ZOMATO.NS",
+"bse": "ZOMATO.BO",
+"sector": "Internet"
+},
+{
+"name": "Vedanta",
+"nse": "VEDL.NS",
+"bse": "VEDL.BO",
+"sector": "Metals"
+},
+{
+"name": "Punjab National Bank",
+"nse": "PNB.NS",
+"bse": "PNB.BO",
+"sector": "Banking"
+},
+{
+"name": "Bank of Baroda",
+"nse": "BANKBARODA.NS",
+"bse": "BANKBARODA.BO",
+"sector": "Banking"
+},
+{
+"name": "GAIL India",
+"nse": "GAIL.NS",
+"bse": "GAIL.BO",
+"sector": "Oil & Gas"
+},
+{
+"name": "Indian Oil Corporation",
+"nse": "IOC.NS",
+"bse": "IOC.BO",
+"sector": "Oil & Gas"
+},
+{
+"name": "Bharat Petroleum",
+"nse": "BPCL.NS",
+"bse": "BPCL.BO",
+"sector": "Oil & Gas"
+},
+{
+"name": "Havells India",
+"nse": "HAVELLS.NS",
+"bse": "HAVELLS.BO",
+"sector": "Consumer Durables"
+},
+{
+"name": "Siemens",
+"nse": "SIEMENS.NS",
+"bse": "SIEMENS.BO",
+"sector": "Capital Goods"
+},
+{
+"name": "Trent",
+"nse": "TRENT.NS",
+"bse": "TRENT.BO",
+"sector": "Retail"
+},
+{
+"name": "Varun Beverages",
+"nse": "VBL.NS",
+"bse": "VBL.BO",
+"sector": "FMCG"
+},
+{
+"name": "InterGlobe Aviation (IndiGo)",
+"nse": "INDIGO.NS",
+"bse": "INDIGO.BO",
+"sector": "Aviation"
+},
+{
+"name": "Jio Financial Services",
+"nse": "JIOFIN.NS",
+"bse": "JIOFIN.BO",
+"sector": "NBFC"
+}
+]
