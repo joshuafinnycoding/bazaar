@@ -59,6 +59,8 @@
   .area{fill:url(#g);opacity:.5}
   .newsdot{fill:var(--news);stroke:var(--bg);stroke-width:1.5;cursor:pointer;transition:r .12s}
   .newsdot:hover{fill:#9cc5ec;r:7}
+  .newsdot.edge{fill:none;stroke:var(--news);stroke-width:2;opacity:.7}
+  .newsdot.edge:hover{fill:var(--news);opacity:1}
   .legend{display:flex;gap:18px;flex-wrap:wrap;padding:8px 8px 2px;font-size:11px;color:var(--dim)}
   .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
 
@@ -128,6 +130,7 @@
     <div class="legend">
       <span><i style="background:var(--gold)"></i>Price (15-min intraday / daily)</span>
       <span><i style="background:var(--news)"></i>News marker — hover/tap for summary</span>
+      <span><i style="border:2px solid var(--news);background:transparent"></i>Older news (pinned to chart edge)</span>
     </div>
   </div>
   <div class="status" id="status"></div>
@@ -281,16 +284,21 @@ function render(){
   const X=v=>PAD.l+(v-xMin)/(xMax-xMin)*(W-PAD.l-PAD.r);
   const Y=v=>PAD.t+(1-(v-yMin)/(yMax-yMin))*(H-PAD.t-PAD.b);
 
-  // map news to nearest in-range timestamp
+  // map every news item onto the chart. Items inside the time window sit at
+  // their real date; items older/newer than the window are clamped to the
+  // nearest edge so they still appear (flagged visually) instead of vanishing.
   plotted=[];
+  let outOfRange=0;
   for(const nw of newsItems){
-    if(nw.ts<xMin-864e5||nw.ts>xMax+864e5) continue; // allow slight overhang
+    const inRange = nw.ts>=xMin && nw.ts<=xMax;
+    if(!inRange) outOfRange++;
     const cx=Math.max(xMin,Math.min(xMax,nw.ts));
-    // find nearest price point for y
+    // nearest price point gives the marker its y position
     let bi=0,bd=Infinity;
     for(let i=0;i<t.length;i++){const d=Math.abs(t[i]-cx);if(d<bd){bd=d;bi=i;}}
-    plotted.push({...nw, x:X(cx), y:Y(c[bi])});
+    plotted.push({...nw, x:X(cx), y:Y(c[bi]), edge:!inRange});
   }
+  window.__outOfRange=outOfRange;
 
   // build path
   let d="M"+X(t[0]).toFixed(1)+","+Y(c[0]).toFixed(1);
@@ -313,7 +321,7 @@ function render(){
     xlab+=`<text x="${X(tt).toFixed(1)}" y="${H-8}" text-anchor="middle">${lbl}</text>`;
   }
 
-  const dots=plotted.map((p,i)=>`<circle class="newsdot" r="5" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" data-i="${i}"/>`).join("");
+  const dots=plotted.map((p,i)=>`<circle class="newsdot${p.edge?' edge':''}" r="5" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" data-i="${i}"/>`).join("");
 
   document.getElementById("chartHost").innerHTML=`
     <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" id="svg">
@@ -331,7 +339,7 @@ function render(){
   bindDots();
   buildFeed();
   document.getElementById("status").textContent=
-    `${plotted.length} news marker(s) on chart · ${newsItems.length} headlines · updated ${new Date().toLocaleTimeString("en-IN")}`;
+    `${plotted.length} news marker(s) — ${plotted.length-(window.__outOfRange||0)} in range, ${window.__outOfRange||0} pinned to edge (older than this range; try 6M/1Y) · updated ${new Date().toLocaleTimeString("en-IN")}`;
 }
 
 /* ---------- tooltip on dots ---------- */
