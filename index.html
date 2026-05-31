@@ -259,12 +259,31 @@ async function fetchPrice(){
 }
 
 async function fetchNews(){
-  // stock-specific + sector news (your chosen scope)
-  const term = `${current.name} OR "${current.sector}" stock`;
-  const url=`${WORKER}/news?q=${encodeURIComponent(term)}`;
-  const r=await fetch(url); const j=await r.json();
-  if(j.error) throw new Error("News error: "+j.error);
-  return (j.items||[]).map(it=>({...it, ts:Date.parse(it.pubDate)})).filter(it=>!isNaN(it.ts));
+  // Simpler queries return far more reliable results than a complex OR-query.
+  // Fetch stock-specific and sector news separately, then merge + dedupe.
+  const qs = [
+    `${current.name} share price`,
+    `${current.sector} sector India`,
+  ];
+  let all=[], dbg=[];
+  for(const term of qs){
+    try{
+      const r=await fetch(`${WORKER}/news?q=${encodeURIComponent(term)}`);
+      const j=await r.json();
+      if(j.debug) dbg.push(j.debug);
+      if(j.items) all=all.concat(j.items);
+    }catch(e){ dbg.push("fetch-fail"); }
+  }
+  window.__newsDebug = dbg.join(" | ");
+  // dedupe by title
+  const seen=new Set(), out=[];
+  for(const it of all){
+    const k=(it.title||"").slice(0,60);
+    if(seen.has(k)) continue; seen.add(k);
+    const ts=Date.parse(it.pubDate);
+    if(!isNaN(ts)) out.push({...it, ts});
+  }
+  return out;
 }
 
 /* ---------- render chart (SVG) ---------- */
@@ -339,7 +358,7 @@ function render(){
   bindDots();
   buildFeed();
   document.getElementById("status").textContent=
-    `${plotted.length} news marker(s) — ${plotted.length-(window.__outOfRange||0)} in range, ${window.__outOfRange||0} pinned to edge (older than this range; try 6M/1Y) · updated ${new Date().toLocaleTimeString("en-IN")}`;
+    `${plotted.length} marker(s) — ${plotted.length-(window.__outOfRange||0)} in range, ${window.__outOfRange||0} at edge · news fetched: ${newsItems.length} [${window.__newsDebug||"?"}] · ${new Date().toLocaleTimeString("en-IN")}`;
 }
 
 /* ---------- tooltip on dots ---------- */
